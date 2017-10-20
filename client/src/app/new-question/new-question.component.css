@@ -1,0 +1,14 @@
+p{
+    display : inline-block;
+}
+
+.boxborder{
+    border : 1px solid red;
+}
+
+div{
+    border : 1px solid blue;
+    padding : 20px;
+    margin : 10px;
+    
+}

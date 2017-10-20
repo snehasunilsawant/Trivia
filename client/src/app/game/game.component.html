@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h3 style='color:green'>{{msg}}</h3>  
+  </div>
+  <br>
+
+  <div>
+    <button (click)='play()'>Play !</button>
+    <p>Click  the button above to start the trivia game</p>
+  </div>
+
+  <br>
+
+  <div>
+    <h2>Final Result</h2>
+    <form>
+        <p>Search :
+           <input type='text' name='search' [(ngModel)]="strsearch">
+                 
+    </form>
+  <!-- {{strsearch}} -->
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Percentage</th>
+      </tr>
+      <tr *ngFor='let user of users | search: strsearch '>
+        <td>{{user.name}}</td>
+        <td>{{user.score}}/3</td>
+        <td>{{user.percentage}}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

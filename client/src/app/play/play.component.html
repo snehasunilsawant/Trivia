@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h3>Hi {{ username }}!</h3>
+    <p>Choose an answer for each of questions and submit the test once done.</p>
+    <p>Good luck!</p>
+  </div>
+  
+  <!-- <div *ngFor='let question of questions ; let idx = index'> -->
+    <form>
+      <p>1. {{question1.qtext}}</p>
+      <input type='radio' name='ans' [(ngModel)]="myVar1" [value]=question1.correctAns>{{question1.correctAns}}
+      <br>
+      <input type='radio' name='ans' [(ngModel)]="myVar1" [value]=question1.fakeAns1>{{question1.fakeAns1}}
+      <br>
+      <input type='radio' name='ans' [(ngModel)]="myVar1" [value]=question1.fakeAns2>{{question1.fakeAns2}}   
+    </form>
+
+    <form>
+        <p>2. {{question2.qtext}}</p>
+        <input type='radio' name='ans' [(ngModel)]="myVar2" [value]=question2.correctAns>{{question2.correctAns}}
+        <br>
+        <input type='radio' name='ans' [(ngModel)]="myVar2" [value]=question2.fakeAns1>{{question2.fakeAns1}}
+        <br>
+        <input type='radio' name='ans' [(ngModel)]="myVar2" [value]=question2.fakeAns2>{{question2.fakeAns2}}   
+    </form>  
+
+    <form>
+          <p>3. {{question3.qtext}}</p>
+          <input type='radio' name='ans' [(ngModel)]="myVar3" [value]=question3.correctAns>{{question3.correctAns}}
+          <br>
+          <input type='radio' name='ans' [(ngModel)]="myVar3" [value]=question3.fakeAns1>{{question3.fakeAns1}}
+          <br>
+          <input type='radio' name='ans' [(ngModel)]="myVar3" [value]=question3.fakeAns2>{{question3.fakeAns2}}   
+    </form>        
+
+  <button (click)='checkAnswer()'>Submit</button>
+  
+
+<!-- {{myVar1}}  {{myVar2}}  {{myVar3}} -->
+</body>
+</html>
